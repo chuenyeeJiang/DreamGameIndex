@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DreamGame</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/log.js"></script>
+    <script src="js/function-1.0.0.js"></script>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="webjars/element-ui/2.7.2/lib/theme-chalk/index.css">
+    <!-- 引入图标 -->
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="fonts/webfont.css">
+    <!-- import Vue before Element -->
+    <script src="webjars/vue/2.5.16/vue.js"></script>
+    <!-- import JavaScript -->
+    <script src="webjars/element-ui/2.7.2/lib/index.js"></script>
+    <script>
+        Animation_slider("nav", -100);
+    </script>
+</head>
+<style>
+    .purpleMongolianEdition:before {
+        background-color: #bf8be7;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        content: "";
+        position: absolute;
+        opacity: 0.8;
+    }
+
+    .el-carousel__button {
+        background-color: #a75be1;
+    }
+</style>
+<body class="theme-dark" style="margin: 0;background-color: #eee">
+<div id="app">
+
+    <!-- 导航 -->
+    <div class="nav row sliderUp">
+        <ul class="navlist borderLeft">
+            <i class="col-1">LOGO</i>
+            <li class="col-2-offset" style="width: fit-content"><i></i><a href="#"><h1>主页</h1></a></li>
+            <li style="width: fit-content"><i></i><a href="#"><h3>简介</h3></a></li>
+            <li style="width: fit-content"><i></i><a href="#"><h3>新闻</h3></a></li>
+            <li style="width: fit-content"><i></i><a href="#"><h3>社区</h3></a></li>
+            <li style="width: fit-content"><i></i><a href="#"><h3>关于我们</h3></a></li>
+            <li style="width: fit-content"><i></i><a href="#"><h3>加入我们</h3></a></li>
+            <button class="color-success btn pc" type="button">登录/注册</button>
+
+            <span class="icon-menu" style="font-size: 30px"></span>
+        </ul>
+    </div>
+
+    <!-- 背景图 -->
+    <div class="div-bg  full "
+         style="position: relative;z-index: -100;overflow: hidden; height: 600px;margin-top: -60px">
+        <!--   <div class="full"  style="background: url('img/53b5b57880067.jpg') no-repeat center center"></div>-->
+        <div class="fadeout full bg"
+             style="background: url('http://demo.cssmoban.com/cssthemes6/resu_1_designer-Portfolio/assets/hero-bg.jpg') no-repeat center center fixed;"></div>
+        <!-- 装饰 -->
+        <img class="alwaysRotate" src="img/icon-3.png" style="position: absolute;top: 500px;left: 50px">
+        <img class="alwaysRotate" src="img/icon-3.png" style="position: absolute;top: 200px;right: 50px">
+        <!-- 标题文字 -->
+        <div class="row" style="top: 200px;height: 100px;position: absolute;">
+            <b class="col-12 center sliderLeft"
+               style="font-family: webfont;color:#FFFFFF;font-size: 50px;text-shadow:black 0.1em 0.1em 0.2em ">Project
+                Name</b>
+        </div>
+        <div class="row" style="top: 260px;height: 100px;position: absolute">
+            <i class="col-3-offset col-9 center sliderLeft"
+               style="font-family: webfont;color:#FFFFFF;text-shadow:black 0.1em 0.1em 0.2em ">say some thing
+                details</i>
+        </div>
+    </div>
+
+    <div class="row" style="top: -250px;position: relative;z-index: 2">
+        <button class="btn  sliderLeft col-5-offset color-primary" style="width: 200px" type="button">按钮</button>
+        <button class="btn  sliderLeft color-warning" style="margin-left: 10px;width: 200px" type="button">按钮</button>
+    </div>
+
+
+    <!-- 大卡片 -->
+    <div class="row sliderDown" style="margin-top: -150px;height: 400px;position: relative">
+        <div class="col-1-offset col-10"
+             style="background-color: #FFFFFF;box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);">
+            <template>
+                <el-carousel :interval="5000" arrow="never" style="height: 400px">
+                    <!-- 轮播1 产品-->
+                    <el-carousel-item style="height: 400px">
+                        <!-- 标题 -->
+                        <div class="row" style="height: 100px;position: absolute">
+                            <b class="col-12 center fadeout"
+                               style="font-family: webfont;color: rgb(255, 208, 75);font-size: 50px;">Product</b>
+                        </div>
+                        <!-- 卡片精品 -->
+                        <div class="row fadeout center" style="margin-top:120px;height: 400px;">
+                            <div class="col-1-offset" style="width: 128px;margin-left: 0">
+                                <el-card :body-style="{ padding: '14px' }">
+                                    <span class="icon iconfont" style="font-size: 100px">&#xe600;</span>
+                                    <div style="padding: 14px;">
+                                        <div style="width:100%;text-align: center">精品</div>
+                                        <div class="bottom clearfix">
+                                            <button class="btn" style="width: 70px">进入</button>
+                                        </div>
+                                    </div>
+                                </el-card>
+                            </div>
+                            <div class="col-1-offset" style="width: 128px">
+                                <el-card :body-style="{ padding: '14px' }" style="width: 100%">
+                                    <span class="icon iconfont" style="font-size: 100px">&#xe8e6;</span>
+                                    <div style="padding: 14px;">
+                                        <div style="width:100%;text-align: center">排行</div>
+                                        <div class="bottom clearfix">
+                                            <button class="btn" style="width: 70px">进入</button>
+                                        </div>
+                                    </div>
+                                </el-card>
+                            </div>
+                            <div class="col-1-offset" style="width: 128px">
+                                <el-card :body-style="{ padding: '14px' }" style="width: 100%">
+                                    <span class="icon iconfont" style="font-size: 100px">&#xe612;</span>
+                                    <div style="padding: 14px;">
+                                        <div style="width:100%;text-align: center">分类</div>
+                                        <div class="bottom clearfix">
+                                            <button class="btn" style="width: 70px">进入</button>
+                                        </div>
+                                    </div>
+                                </el-card>
+                            </div>
+                        </div>
+                    </el-carousel-item>
+                    <!-- 轮播2 作者-->
+                    <el-carousel-item style="height: 400px">
+                        <!-- 标题 -->
+                        <div class="row" style="height: 100px;position: absolute">
+                            <b class="col-12 center fadeout"
+                               style="font-family: webfont;color: rgb(255, 208, 75);font-size: 50px;">Creator</b>
+                        </div>
+                        <!-- 卡片精品 -->
+                        <div class="row fadeout center" style="margin-top:120px;height: 400px;">
+                            <div class="col-1-offset" style="width: 128px;margin-left: 0">
+                                <el-card :body-style="{ padding: '14px' }">
+                                    <span class="icon iconfont" style="font-size: 100px">&#xe6cd;</span>
+                                    <div style="padding: 14px;">
+                                        <div style="width:100%;text-align: center">上传</div>
+                                        <div class="bottom clearfix">
+                                            <button class="btn" style="width: 70px">进入</button>
+                                        </div>
+                                    </div>
+                                </el-card>
+                            </div>
+                            <div class="col-1-offset" style="width: 128px">
+                                <el-card :body-style="{ padding: '14px' }" style="width: 100%">
+                                    <span class="icon iconfont" style="font-size: 100px">&#xe67c;</span>
+                                    <div style="padding: 14px;">
+                                        <div style="width:100%;text-align: center">团队</div>
+                                        <div class="bottom clearfix">
+                                            <button class="btn" style="width: 70px">进入</button>
+                                        </div>
+                                    </div>
+                                </el-card>
+                            </div>
+                            <div class="col-1-offset" style="width: 128px">
+                                <el-card :body-style="{ padding: '14px' }" style="width: 100%">
+                                    <span class="icon iconfont" style="font-size: 100px">&#xe647;</span>
+                                    <div style="padding: 14px;">
+                                        <div style="width:100%;text-align: center">素材</div>
+                                        <div class="bottom clearfix">
+                                            <button class="btn" style="width: 70px">进入</button>
+                                        </div>
+                                    </div>
+                                </el-card>
+                            </div>
+                        </div>
+                    </el-carousel-item>
+                </el-carousel>
+            </template>
+        </div>
+    </div>
+
+    <div class="clip-1 fadeout purpleMongolianEdition "
+         style="height: 500px;margin-top: 100px;background: url('http://demo.cssmoban.com/cssthemes6/resu_1_designer-Portfolio/assets/hero-bg.jpg') center center no-repeat fixed;position: relative">
+        <!-- 标题文字 -->
+        <div class="row" style="top: 70px;height: 100px;position: absolute;">
+            <b class="col-12 center sliderLeft"
+               style="font-family: webfont;color:#FFFFFF;font-size: 50px;text-shadow:black 0.1em 0.1em 0.2em ">Team
+                Name</b>
+        </div>
+        <div class="row" style="top: 170px;height: 100px;position: absolute">
+            <i class="col-3-offset col-6 center sliderLeft"
+               style="font-family: webfont;color:#FFFFFF;text-shadow:black 0.1em 0.1em 0.2em ">&nbsp;&nbsp;
+                We design and develop services for customers of all sizes, specializing in creating stylish, modern
+                websites, web services and online stores. Design is our art and our passion. Our goal is to create the
+                best products with a pixel-perfect eye for detail and a high standard for aesthetic excellence.</i>
+        </div>
+        <div class="row" style="top: 300px;position: relative;z-index: 2">
+            <button class="btn  sliderLeft col-3-offset col-6" onclick="$('body').scrollTo(0,0);" type="button">join
+                us
+            </button>
+        </div>
+
+    </div>
+
+    <!--<div style="box-shadow:rgba(0, 0, 0, 0.2) 0px 2px 12px 0px;border-radius: 50%;height: 50px;width: 50px;background-color: #bf8be7;position: fixed;margin-bottom: 100px;margin-right: 100px"><i class="el-icon-caret-top" style="font-size: 50px;color:#bf8be7;text-shadow: 1px 1px 2px black, -1px -1px 2px white"></i></div>-->
+
+
+    <!--   &lt;!&ndash; 页脚 -->
+    <div class="footer-area clip-3">
+        <div  style="margin-top: 100px;left: 100px">
+            <!-- 数据加载环 -->
+            <div class="donut donut-1" style="top: 200px;position: relative;float: left;left: 200px">
+                <h1 class="donut-num">0</h1>
+                <!-- 中心圆 -->
+                <svg width="160px" height="160px">
+                    <circle r="48px" cx="70px" cy="70px" fill="#ffb83f"></circle>
+                </svg>
+
+                <!-- 进度环 -->
+                <svg width="160px" height="80px" class="donut-ring-container donut-ring-container-left">
+                    <circle class="donut-ring donut-ring-right" r="58px" cx="90px" cy="0px" stroke-dasharray="377"
+                            stroke-dashoffset="195" stroke-width="25" stroke="white" fill="none"></circle>
+                </svg>
+
+                <svg width="160px" height="80px" class="donut-ring-container donut-ring-container-right">
+                    <circle class="donut-ring donut-ring-left" r="58px" cx="70px" cy="0" stroke-dasharray="377"
+                            stroke-dashoffset="195" stroke-width="25" stroke="white" fill="none"></circle>
+                </svg>
+            </div>
+
+            <!-- 数据加载环 -->
+            <div class="donut donut-2" style="top: 200px;position: relative;float: left;left: 400px">
+                <h1 class="donut-num">0</h1>
+                <!-- 中心圆 -->
+                <svg width="160px" height="160px">
+                    <circle r="48px" cx="70px" cy="70px" fill="#ffb83f"></circle>
+                </svg>
+
+                <!-- 进度环 -->
+                <svg width="160px" height="80px" class="donut-ring-container donut-ring-container-left">
+                    <circle class="donut-ring donut-ring-right" r="58px" cx="90px" cy="0px" stroke-dasharray="377"
+                            stroke-dashoffset="195" stroke-width="25" stroke="white" fill="none">
+                    </circle>
+                </svg>
+
+                <svg width="160px" height="80px" class="donut-ring-container donut-ring-container-right">
+                    <circle class="donut-ring donut-ring-left" r="58px" cx="70px" cy="0" stroke-dasharray="377"
+                            stroke-dashoffset="195" stroke-width="25" stroke="white" fill="none">
+                    </circle>
+                </svg>
+            </div>
+
+            <!-- 数据加载环 -->
+            <div class="donut donut-1" style="top: 200px;position: relative;float: left;left: 600px">
+                <h1 class="donut-num">0</h1>
+                <!-- 中心圆 -->
+                <svg width="160px" height="160px">
+                    <circle r="48px" cx="70px" cy="70px" fill="#ffb83f"></circle>
+                </svg>
+
+                <!-- 进度环 -->
+                <svg width="160px" height="80px" class="donut-ring-container donut-ring-container-left">
+                    <circle class="donut-ring donut-ring-right" r="58px" cx="90px" cy="0px" stroke-dasharray="377"
+                            stroke-dashoffset="195" stroke-width="25" stroke="white" fill="none"></circle>
+                </svg>
+
+                <svg width="160px" height="80px" class="donut-ring-container donut-ring-container-right">
+                    <circle class="donut-ring donut-ring-left" r="58px" cx="70px" cy="0" stroke-dasharray="377"
+                            stroke-dashoffset="195" stroke-width="25" stroke="white" fill="none"></circle>
+                </svg>
+            </div>
+
+            <!-- 数据加载环 -->
+            <div class="donut donut-1" style="top: 200px;position: relative;float: left;left: 800px">
+                <h1 class="donut-num">0</h1>
+                <!-- 中心圆 -->
+                <svg width="160px" height="160px">
+                    <circle r="48px" cx="70px" cy="70px" fill="#ffb83f"></circle>
+                </svg>
+
+                <!-- 进度环 -->
+                <svg width="160px" height="80px" class="donut-ring-container donut-ring-container-left">
+                    <circle class="donut-ring donut-ring-right" r="58px" cx="90px" cy="0px" stroke-dasharray="377"
+                            stroke-dashoffset="195" stroke-width="25" stroke="white" fill="none"></circle>
+                </svg>
+
+                <svg width="160px" height="80px" class="donut-ring-container donut-ring-container-right">
+                    <circle class="donut-ring donut-ring-left" r="58px" cx="70px" cy="0" stroke-dasharray="377"
+                            stroke-dashoffset="195" stroke-width="25" stroke="white" fill="none"></circle>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot"><a class="top-set el-icon-bottom-right"
+                         onclick="$('html,body').animate({scrollTop: '0px'}, 800);"><span class="icon iconfont" style="font-size: 50px;
+    margin-left: -10px;
+    color: #ffffff;">&#xe609;</span></a>
+    </div>
+    <!--    <svg style="width: 500px;height: 500px;stroke-dasharray: 100;border-radius: 100%;stroke-dashoffset: 410;animation: stroke-dashoffset 1s ease-out forwards; stroke-width: 25px;
+        stroke: rgb(12, 102, 158);
+        transform-origin: 50% 50% 0px;
+        fill: none;
+        transform: rotate(-90deg);">213123</svg>-->
+
+</div>
+</body>
+
+</html>
+<script>
+    scrollAnimation("nav", 0, scrollAnimation.Type.SLIDERUP);
+
+    $(".donut-1 .donut-ring").css("transition-duration", " " + getTime(100, 377) / 2 + "s");
+    $(".donut-2 .donut-ring").css("transition-duration", " " + getTime(100, 1000) / 2 + "s");
+
+    timeKeepingDisplay("donut-1 .donut-num", 0, 377, 10);
+    timeKeepingDisplay("donut-2 .donut-num", 0, 1000, 10);
+
+    window.onload = function () {
+        donutRing("donut", 1);
+    };
+
+
+    if (!isPC()) {
+        $(".bg").css("background", "url('http://demo.cssmoban.com/cssthemes6/resu_1_designer-Portfolio/assets/hero-bg.jpg') top center no-repeat fixed");
+    }
+
+    var va = new Vue({
+        el: '#app',
+        data: {},
+        methods: {}
+    });
+
+</script>

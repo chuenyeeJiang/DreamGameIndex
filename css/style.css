@@ -1,0 +1,508 @@
+/*
+  按钮
+ */
+.btn{
+    background-color: white;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    outline: none;
+}
+/*.btn:hover{*/
+    /*!*filter:brightness(90%) ;*!*/
+    /*!*-webkit-filter: brightness(90%);*!*/
+    /*transition: all .66s cubic-bezier(.17,.84,.44,1);*/
+    /*background: #dc0b0d!important;*/
+/*}*/
+/*.btn:active{*/
+    /*filter:brightness(80%) ;*/
+    /*-webkit-filter: brightness(80%);*/
+/*}*/
+.btn:hover{
+    color: #409eff;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+}
+.btn:active{
+    color: #3a8ee6;
+    border-color: #3a8ee6;
+    outline: none;
+}
+.color-primary{
+     color: #fff;
+     background-color: #3a8ee6;;
+     border-color: #3a8ee6;;
+ }
+.btn.color-primary:hover,.color-primary:hover{
+    color: #fff;
+    background: #66b1ff;
+    border-color: #66b1ff;
+}
+.btn.color-primary:active{
+    color: #fff;
+    background: #3a8ee6;
+    background: #3a8ee6;
+}
+.btn.color-brand:hover{
+    color: #fff;
+    background: #66b1ff;;
+    border-color: #66b1ff;
+}
+.color-success{
+    color: #fff;
+    background: #67c23a;
+    border-color:#67c23a;
+}
+.btn.color-success:hover{
+    color: #fff;
+    background: #85ce61;
+    border-color: #85ce61;
+}
+.btn.color-success:active{
+    color: #fff;
+    background: #5daf34;
+    border-color: #5daf34;
+}
+.color-warning{
+     color: #fff;
+     background: #e6a23c;
+     border-color: #e6a23c;
+ }
+.btn.color-warning:hover{
+    color: #fff;
+    background: #ebb563;
+    border-color: #ebb563;
+}
+.btn.color-warning:active{
+    color: #fff;
+    background: #cf9236;
+    border-color: #cf9236;
+}
+.color-danger{
+    color: #fff;
+    background: #dd6161;
+    border-color: #dd6161;
+}
+.btn.color-danger:hover{
+    color: #fff;
+    background:#f78989;
+    border-color: #f78989;
+}
+.btn.color-danger:active{
+    color: #fff;
+    background: #dd6161;
+    border-color: #dd6161;
+}
+.color-info{
+    color: #fff;
+    background: #909399;
+    border-color: #909399;
+}
+.btn.color-info:hover{
+    color: #fff;
+    background: #a6a9ad;
+    border-color:#a6a9ad;
+}
+.btn.color-info:active{
+    color: #fff;
+    background: #82848a;
+    border-color:#82848a;
+}
+/*
+导航栏
+ */
+
+.nav {
+    width: 100%;
+    height: 60px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 60px;
+}
+
+.navlist{
+    height: 100%;
+    margin: 0;
+    list-style: none;
+}
+.navlist li{
+    float: left;
+     /*height: 60px;*/
+     padding: 0 33px;
+     height: 60px;
+     line-height: 60px;
+     vertical-align: middle;
+     text-align: center;
+ }
+.navlist li *{
+  margin: 0;
+}
+.navlist li:first-of-type a *{
+    font-weight: bold;
+}
+.navlist li a *{
+    font-weight: normal;
+}
+.navlist li a{
+    text-decoration: none;
+}
+
+
+/*PC*/
+@media all  and (max-width: 1390px) {
+    .navlist li{
+        position: fixed;
+        visibility: hidden;
+    }
+    .navlist .pc{
+        position: fixed;
+        visibility: hidden;
+    }
+
+}
+.navlist .icon-menu {
+    position: absolute;
+    vertical-align: middle;
+    right: 37px;
+    font-family: myfont;
+}
+.navlist .icon-menu:before{
+    content: "\2630";
+    font-family: myfont;
+}
+/*MO*/
+@media all  and (min-width: 1390px) {
+    .navlist .icon-menu{
+        position: fixed;
+        visibility: hidden;
+    }
+    .navlist .phone{
+        position: fixed;
+        visibility: hidden;
+    }
+}
+/*
+图片处理
+ */
+.edgeBlur:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    box-shadow:0 0 50px 10px #ffffff inset;
+    content: "";
+}
+/*
+主题色
+ */
+/* 导航栏 */
+
+.theme-dark .nav{
+    visibility: visible;
+    background-color: rgb(57, 55, 56);
+    color: white;
+    box-shadow:   0px 3px 10px white;
+    transition: 1s;
+}
+/*.theme-dark .nav .navlist li:before{*/
+    /*width: 1px;*/
+    /*background-color: rgb(57, 55, 56);*/
+/*}*/
+.theme-dark .nav .navlist li a:link{
+     color: white;
+ }
+.theme-dark .nav .navlist li:first-of-type{
+    background-color: rgb(255, 208, 75);
+}
+.theme-dark .nav .navlist li:first-of-type:hover{
+    background-color: rgb(255, 208, 75);
+}
+.theme-dark .nav .navlist li:first-of-type:active{
+    background-color: rgb(250, 153, 20);
+    color: white;
+}
+.theme-dark .nav .navlist li a:visited{
+    color: white;
+}
+.theme-dark .nav .navlist li a:hover{
+    color: white;
+}
+.theme-dark .nav .navlist li a:active{
+    color: white;
+ }
+
+.theme-dark .nav .navlist li{
+    box-sizing: border-box;
+    transition: all 0.5s;
+    position: relative;
+}
+/*导航栏动画*/
+/*边框上显*/
+.theme-dark .nav .navlist li:hover{
+    filter: brightness(1.1);
+    background-color: rgba(255,255,255,0.1);
+}
+.theme-dark .nav .borderUp li:hover{
+     border-bottom:  rgb(255, 208, 75) 5px solid;
+ }
+.theme-dark .nav .borderLeft li:active{
+    box-sizing: border-box;
+    filter: brightness(0.9);
+    background-color: rgba(0,0,0,0.1);
+    transition: filter  2s,background-color 2s;
+    -webkit-transition: filter  2s,background-color 2s;
+    border-bottom:  rgb(255, 208, 75) 5px solid;
+}
+.theme-dark .nav .borderLeft li::before{
+     content: "";
+     background-color: rgb(255, 208, 75);
+     width: 0px;
+     bottom: 0px;
+     left: 0;
+     position: absolute;
+     height: 3px;
+    transition: all 0.5s;
+ }
+.theme-dark .nav .borderLeft li:hover:before{
+    width: 100%;
+    transition: all 0.5s;
+}
+/*.theme-dark .nav .navlist li:hover{
+   transition: border-bottom 0.5s;
+}*/
+/* 动态数据 */
+/*.dynamicLines{*/
+    /*height: 2px;*/
+    /*background: black;*/
+    /*animation: ;*/
+
+/*}*/
+
+
+/*字体*/
+@font-face
+{
+    font-family: myfont;
+    src: url('../fonts/iconfont.svg');
+    src: url("../fonts/iconfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/iconfont.woff") format("woff"),
+    url("../fonts/iconfont.ttf") format("truetype"),
+    url("../fonts/iconfont.svg#icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* 动画 */
+.sliderUp{
+    animation: sliderUp 1;
+    -webkit-animation: sliderUp 1s;
+}
+.sliderDown{
+    animation: sliderDown 1;
+    -webkit-animation: sliderDown 1s;
+}
+.sliderLeft{
+    animation: sliderLeft 1;
+    -webkit-animation: sliderLeft 1s;
+}
+.sliderRight{
+    animation: sliderRight 1;
+    -webkit-animation: sliderRight 1s;
+}
+.sliderLeftUp{
+    animation: sliderLeftUp 1;
+    -webkit-animation: sliderLeftUp 1s;
+}
+.sliderLeftDown{
+    animation: sliderLeftDown 1;
+    -webkit-animation: sliderLeftDown 1s;
+}
+.fadeout{
+    animation: _fadeoout 1;
+    -webkit-animation: _fadeoout 1s;
+}
+@keyframes _fadeoout
+{
+    from { opacity: 0}
+    to {opacity: 1;}
+}
+@keyframes sliderUp
+{
+    from {
+        position: relative;
+        top:-100px;
+        opacity: 0}
+    to {position: relative;
+        opacity: 1;
+        top:0px;}
+}
+@-webkit-keyframes sliderUp
+{
+    from {
+        position: relative;
+        top:-100px;
+        opacity: 0}
+    to {position: relative;
+        opacity: 1;
+        top:0px;}
+}
+@keyframes sliderDown
+{
+    from {
+        position: relative;
+        top:100px;
+        opacity: 0}
+    to {position: relative;
+        opacity: 1;
+        top:0px;}
+}
+@-webkit-keyframes sliderDown
+{
+    from {
+        position: relative;
+        top:100px;
+        opacity: 0}
+    to {position: relative;
+        opacity: 1;
+        top:0px;}
+}
+@keyframes sliderLeft
+{
+    from {
+        position: relative;
+        left:-100px;
+        opacity: 0;}
+    to {position: relative;
+        opacity: 1;;
+        left:0px;}
+}
+@-webkit-keyframes sliderLeft
+{
+    from {
+        position: relative;
+        left:-100px;
+        opacity: 0;}
+    to {position: relative;
+        opacity: 1;
+        left:0px;}
+}
+@-webkit-keyframes sliderRight
+{
+    from {
+        position: relative;
+        left:100px;
+        opacity: 0;}
+    to {position: relative;
+        opacity: 1;
+        left:0px;}
+}
+@keyframes sliderRight
+{
+    from {
+        position: relative;
+        left:100px;
+        opacity: 0;}
+    to {position: relative;
+        opacity: 1;
+        left:0px;}
+}
+
+@keyframes sliderLeftUp
+{
+    from {
+        position: relative;
+        left:-100px;
+        top: -100px;
+        opacity: 0;}
+    to {position: relative;
+        opacity: 1;
+        left:0;
+        top: 0;
+    }
+}
+@-webkit-keyframes sliderLeftUp
+ {
+    from {
+        position: relative;
+        left:-100px;
+        top: -100px;
+        opacity: 0;}
+    to {position: relative;
+        opacity: 1;
+        left:0;
+        top: 0;
+    }
+ }
+@keyframes sliderLeftDown
+{
+    from {
+        position: relative;
+        left:-100px;
+        top: 100px;
+        opacity: 0;}
+    to {position: relative;
+        opacity: 1;
+        left:0;
+        top: 0;
+    }
+}
+@-webkit-keyframes sliderLeftDown
+{
+    from {
+        position: relative;
+        left:-100px;
+        top: 100px;
+        opacity: 0;}
+    to {position: relative;
+        opacity: 1;
+        left:0;
+        top: 0;
+    }
+}
+.alwaysRotate{
+    animation: rotation 5s infinite linear;
+}
+@keyframes rotation{
+0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+}
+}
+/* 不规则切割 */
+.clip-1 {
+    clip-path: polygon(10% 0, 100% 10%, 100% 90%, 90% 100%, 0 90%, 0 10%);
+}
+
+.clip-2 {
+    clip-path: polygon(0% 0, 100% 0%, 100% 90%, 90% 100%, 0 90%, 0 10%);
+}
+
+.clip-3 {
+    clip-path: polygon(80% 0px,0px 10%,0px 100%,100% 100%,100% 20%);
+}
+.clip-4 {
+    clip-path:polygon(70% 0,20% 10%,0 30%,0 100%,100% 100%,100% 30%,80% 20%)
+}

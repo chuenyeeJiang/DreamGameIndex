@@ -1,0 +1,252 @@
+.row{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+}
+.row .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    box-sizing: border-box;
+    float: left;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    float: left;
+}
+.row .col-1-offset, .col-2-offset, .col-3-offset, .col-4-offset, .col-5-offset, .col-6-offset, .col-7-offset, .col-8-offset, .col-9-offset, .col-10-offset, .col-11-offset, .col-12-offset {
+    box-sizing: border-box;
+    float: left;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    float: left;
+}
+.row [class$="-offset-right"]{
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    float: right;!important;
+}
+.row .col-12 {
+    width: 100%;
+}
+.row .col-11 {
+    width: 91.66666667%;
+}
+.row .col-10 {
+    width: 83.33333333%;
+}
+.row .col-9 {
+    width: 75%;
+}
+.row .col-8 {
+    width: 66.66666667%;
+}
+.row .col-7 {
+    width: 58.33333333%;
+}
+.row .col-6 {
+    width: 50%;
+}
+.row .col-5 {
+    width: 41.66666667%;
+}
+.row .col-4 {
+    width: 33.33333333%;
+}
+.row .col-3{
+    width: 25%;
+}
+.row .col-2{
+    width:  16.66666667%;
+}
+.row .col-1{
+    width:  8.33333333%;
+}
+.row .col-12-offset {
+    margin-left: 100%;
+}
+.row .col-11-offset {
+    margin-left: 91.66666667%;
+}
+.row .col-10-offset {
+    margin-left: 83.33333333%;
+}
+.row .col-9-offset {
+    margin-left: 75%;
+}
+.row .col-8-offset {
+    margin-left: 66.66666667%;
+}
+.row .col-7-offset {
+    margin-left: 58.33333333%;
+}
+.row .col-6-offset {
+    margin-left: 50%;
+}
+.row .col-5-offset {
+    margin-left: 41.66666667%;
+}
+.row .col-4-offset {
+    margin-left: 33.33333333%;
+}
+.row .col-3-offset{
+    margin-left: 25%;
+}
+.row .col-2-offset{
+    margin-left:  16.66666667%;
+}
+.row .col-1-offset{
+    margin-left:  8.33333333%;
+}
+.row .col-0-offset{
+    margin-left:  0;
+}
+.row .col-12-offset-right {
+    margin-right: 100%;
+}
+.row .col-11-offset-right {
+    margin-right: 91.66666667%;
+}
+.row .col-10-offset-right {
+    margin-right: 83.33333333%;
+}
+.row .col-9-offset-right {
+    margin-right: 75%;
+}
+.row .col-8-offset-right {
+    margin-right: 66.66666667%;
+}
+.row .col-7-offset-right {
+    margin-right: 58.33333333%;
+}
+.row .col-6-offset-right {
+    margin-right: 50%;
+}
+.row .col-5-offset-right {
+    margin-right: 41.66666667%;
+}
+.row .col-4-offset-right {
+    margin-right: 33.33333333%;
+}
+.row .col-3-offset-right{
+    margin-right: 25%;
+}
+.row .col-2-offset-right{
+    margin-right:  16.66666667%;
+}
+.row .col-1-offset-right{
+    margin-right:  8.33333333%;
+}
+
+.row-flex{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction:row;
+}
+.center{
+    /*
+     内容水平居中
+     */
+    justify-content: center;
+    /*
+    内容垂直居中
+     */
+    display: flex;
+    align-items: center;
+    /*  方案一（不可用）
+        vertical-align:middle;
+        display: table-cell;*/
+    /*  方案二（不可用）
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);*/
+    /*  方案三（不可用）
+        padding-top: auto;
+        padding-bottom: auto;*/
+    /*
+     引入layout.js实现
+     */
+}
+.row-flex .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    box-sizing: border-box;
+    float: left;
+    display: flex;
+}
+.row-flex .col-12 {
+    flex-basis: 100%;
+}
+.row-flex .col-11 {
+    flex-basis: 91.66666667%;
+}
+.row-flex .col-10 {
+    flex-basis: 83.33333333%;
+}
+.row-flex .col-9 {
+    flex-basis: 75%;
+}
+.row-flex .col-8 {
+    flex-basis: 66.66666667%;
+}
+.row-flex .col-7 {
+    flex-basis: 58.33333333%;
+}
+.row-flex .col-6 {
+    flex-basis: 50%;
+}
+.row-flex .col-5 {
+    flex-basis: 41.66666667%;
+}
+.row-flex .col-4 {
+    flex-basis: 33.33333333%;
+}
+.row-flex .col-3{
+    flex-basis: 25%;
+}
+.row-flex .col-2{
+    width:  16.66666667%;
+}
+.row-flex .col-1{
+    width:  8.33333333%;
+}
+.row-flex .col-12-offset {
+    margin-left: 100%;
+}
+.row-flex .col-11-offset {
+    margin-left: 91.66666667%;
+}
+.row-flex .col-10-offset {
+    margin-left: 83.33333333%;
+}
+.row-flex .col-9-offset {
+    margin-left: 75%;
+}
+.row-flex .col-8-offset {
+    margin-left: 66.66666667%;
+}
+.row-flex .col-7-offset {
+    margin-left: 58.33333333%;
+}
+.row-flex .col-6-offset {
+    margin-left: 50%;
+}
+.row-flex .col-5-offset {
+    margin-left: 41.66666667%;
+}
+.row-flex .col-4-offset {
+    margin-left: 33.33333333%;
+}
+.row-flex .col-3-offset{
+    margin-left: 25%;
+}
+.row-flex .col-2-offset{
+    margin-left:  16.66666667%;
+}
+.row-flex .col-1-offset{
+    margin-left:  8.33333333%;
+}
+
+.full{
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,59 @@
+.top-set {
+    background-image: -webkit-linear-gradient(90deg, #e6a23c 50%, rgb(57, 55, 56) 50%);
+    width: 30px;
+    height: 50px;
+    position: relative;
+    left: 90%;
+    bottom: 25px;
+}
+.foot{
+    position:relative;background-color: rgb(57, 55, 56);bottom: 0px;height: 50px
+}
+.footer-area{
+    height: 500px;width: 100%;background-color:#e6a23c
+}
+
+.donut{
+    border: 5px solid #ffb83f;
+    border-radius: 100%;
+    width: 140px;
+    height: 140px;
+    background: #0c669e;
+}
+.donut-ring-container{
+    position: absolute;
+    top: 0;
+}
+.donut-ring-container-left{
+   transform:rotate(-90deg);
+    top: 40px;
+    left: 30px;
+}
+.donut-ring-container-right{
+    transform: rotate(90deg);
+    left: -50px;
+    margin-top: 40px;
+}
+.donut-num{
+    color: white;
+    font-family: open;
+    text-align: center;
+    text-shadow: 4px 5px 0 #a5772a;
+    position: absolute;
+    font-style: italic;
+    font-weight: 500;
+    top: 30px;
+    width: 100%;
+    left: -5px;
+}
+.donut-ring{
+     transform-origin: 50%;
+     transition: all 10s;
+    transition-timing-function: linear;
+ }
+.donut-ring-left{
+    transform: rotate(-180deg);
+}
+.donut-ring-right{
+    transform: rotate(180deg);
+}
